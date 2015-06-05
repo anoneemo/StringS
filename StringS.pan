@@ -207,7 +207,7 @@ alias sillaba_endofgame {
   if $exists(sillabamanche.txt) { .remove sillabamanche.txt }
   msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨¨¨°º© 4,2 StringS Ended 11,2 ©º°¨¨¨°º©9,2 ©º°¨¨°º©'
   msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 With8,2 %sillaba_1pts 0,2points, the WINNER is8,2 %sillaba_1nick 0,2!11,2  ¨¨°º©9,2 ©º°¨¨°º©'
-  msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 Get the Game! - https://goo.gl/9hKKh10,211,2  ¨¨°º©9,2 ©º°¨¨°º©'
+  msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 Get the Game! - https://goo.gl/tVDZM80,211,2  ¨¨°º©9,2 ©º°¨¨°º©'
   set %gamesillaba_stato OFF
   unset %sillaba*
 }
@@ -234,7 +234,7 @@ on 1:notice:stringsoff*:?:{
     .timer* off
     msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨¨¨°º© 4,2 StringS Ended 11,2 ©º°¨¨¨°º©9,2 ©º°¨¨°º©'
     msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 With8,2 %sillaba_1pts 0,2points, the WINNER is8,2 %sillaba_1nick 11,2 ! ¨¨°º©9,2 ©º°¨¨°º©'
-msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 Get the Game! - https://goo.gl/9hKKh111,2  ¨¨°º©9,2 ©º°¨¨°º©'
+msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 Get the Game! - https://goo.gl/tVDZM811,2  ¨¨°º©9,2 ©º°¨¨°º©'
     set %gamesillaba_stato OFF
     unset %sillaba*
   }
