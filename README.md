@@ -23,7 +23,12 @@ ONLY the person who runs the game needs to have it installed, other players do n
 
 Installing the game
 ---------------------
-1. Unzip the archive inside mIRC's folder (version 5.71 or above).
+1. Unzip the archive and copy the folder's content inside mIRC's folder (version 5.71 or above). 
+
+    Default folder for Windows is
+    
+        %APPDATA%\Roaming\mIRC\ 
+    
     The "StringS.pan" file has to be in mIRC's main folder, together with the "Dictionary" folder, that
     contains all the necessary dictionary files.
 2. Launch mIRC and, in a window of your choice, type 
