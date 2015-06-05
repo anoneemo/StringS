@@ -83,7 +83,7 @@ using NOTICE, to the client (bot) that's running the game.
    
      /notice botname stringshelp password
 
-   To incrase/decrease round duration:
+   To increase/decrease round duration:
    
      /notice botname stringsm+10 password
      
