@@ -1,0 +1,8 @@
+on 1:START:{
+  %Game_Channel = #yourchannel
+  %Game_Password = yourpassword
+}
+
+on 1:CONNECT:{
+  join %Game_Channel
+}
