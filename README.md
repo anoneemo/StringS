@@ -10,8 +10,18 @@ game may get confusing if colors are disabled.
 Remember: you can open "Strings.pan" with NotePad or any other basic code/text editor. Do NOT
 edit that file if you don't know what you're doing otherwise the game may not work as intended!
 
+What is StringS?
+----------------
+StringS is an IRC game based on words that runs on mIRC and mIRC-based scripts. Scroll down for 
+game rules.
 
-Installing the script
+It's easy to install and play and mIRC is not required to play it: you can leave it running in
+background and use your favorite IRC client to chat and play.
+
+ONLY the person who runs the game needs to have it installed, other players do not!
+
+
+Installing the game
 ---------------------
 1. Unzip the archive inside mIRC's folder (version 5.71 or above).
     The "StringS.pan" file has to be in mIRC's main folder, together with the "Dictionary" folder, that
@@ -35,7 +45,7 @@ same structure) is not enough; you need to change assignments for each letter in
 at least two parts of the code where assignments occurs) and do your assignments, basing yourself on the letters 
 frequency of the new language.
 
-Launching the game in manual mode
+Launching the game in normal mode
 ---------------------------------
 The game can be launched by right-clicking a mIRC chat window. After clicking "Start", selecting the
 channel where you want the game to start and the winning score, a window will appear. It lets you start 
