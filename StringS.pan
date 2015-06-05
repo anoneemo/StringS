@@ -6,7 +6,7 @@ To load the script: /load -rs StringS.pan
 To make the game work as intended, make sure the dictionary is
 contained inside the Dictionary folder
 
-WARNING: launching the game in a channel where colors are enabled 
+WARNING: launching the game in a channel with colors enabled 
 is STRONGLY suggested. The game may get confusing if colors are 
 disabled.
 ;--------------------------------------------------------------
@@ -36,7 +36,7 @@ on 1:NICK:{
   }
   unset %sillaba_tmpp
 }
-on 1:JOIN:%sillaba_canale:{ if (%gamesillaba_stato != OFF) { .msg $nick 11,2  ©º°¨¨°º©'4,2 StringS running on %sillaba_canale 11,2   '©º°¨¨°º© 8,2 Type !help for game rules } }
+on 1:JOIN:%sillaba_canale:{ if (%gamesillaba_stato != OFF) { .msg $nick 11,2  Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'4,2 StringS running on %sillaba_canale 11,2   'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ© 8,2 Type !help in channel for game rules } }
 on 1:TEXT:!points:%sillaba_canale:{ 
   if (%gamesillaba_stato != OFF) {
     sillaba_search $nick
@@ -110,9 +110,9 @@ alias sillaba_start {
     set %sillaba_record $gettok(%sillaba_record,2,35)
     if $exists(sillclass.txt) { .remove sillclass.txt }
     if $exists(sillabamanche.txt) { .remove sillabamanche.txt }
-    msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 4,2 St8rin11gS0,2 by Anoneemo8,2 StArTeD !!11,2 ¨°º©9,2 ©º°¨¨°º©'
-    msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨¨¨°º© 0,29,2 %sillaba_target 0,2 points needed to WIN! 11,2 ©º°¨¨¨°º©9,2 ©º°¨¨°º©'
-    msg %sillaba_canale 9,2 '©º°¨¨°º© 0,2 Don't know how to play? Type 8,2!help 0,2and the bot will tell you in private! 9,2 ©º°¨¨°º©'
+    msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨ 4,2 St8rin11gS0,2 by Anoneemo8,2 StArTeD !!11,2 Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+    msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 0,29,2 %sillaba_target 0,2 points needed to WIN! 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+    msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ© 0,2 Don't know how to play? Type 8,2!help 0,2and the bot will tell you in private! 9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
     echo -a 8,2 Start the first round whenever you're ready by clicking the START GAME button on the game control panel
     dialog -m sillabagame sillabagame
   }
@@ -139,8 +139,8 @@ on 1:notice:stringson*:?:{
       set %sillaba_record $gettok(%sillaba_record,2,35)
       if $exists(sillclass.txt) { .remove sillclass.txt }
       if $exists(sillabamanche.txt) { .remove sillabamanche.txt }
-      msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 4,2 St-8rin-11gS0,2 by Anoneemo8,2 StArTeD by $nick 11,2¨°º©9,2 ©º°¨¨°º©'
-      msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨¨¨°º©0,2 9,2 %sillaba_target 0,2 points needed to WIN! 11,2 ©º°¨¨¨°º©9,2 ©º°¨¨°º©'
+      msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨ 4,2 St-8rin-11gS0,2 by Anoneemo8,2 StArTeD by $nick 11,2Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+      msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ©0,2 9,2 %sillaba_target 0,2 points needed to WIN! 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
       .timerhub 1 20 sillaba_hub
     }
   }
@@ -205,9 +205,9 @@ alias sillaba_endofgame {
   }
   if $exists(sillclass.txt) { .remove sillclass.txt }
   if $exists(sillabamanche.txt) { .remove sillabamanche.txt }
-  msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨¨¨°º© 4,2 StringS Ended 11,2 ©º°¨¨¨°º©9,2 ©º°¨¨°º©'
-  msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 With8,2 %sillaba_1pts 0,2points, the WINNER is8,2 %sillaba_1nick 0,2!11,2  ¨¨°º©9,2 ©º°¨¨°º©'
-  msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 Get the Game! - https://goo.gl/9hKKh10,211,2  ¨¨°º©9,2 ©º°¨¨°º©'
+  msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 4,2 StringS Ended 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+  msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨ 0,2 With8,2 %sillaba_1pts 0,2points, the WINNER is8,2 %sillaba_1nick 0,2!11,2  Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+  msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨ 0,2 Get the Game! - https://goo.gl/9hKKh10,211,2  Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
   set %gamesillaba_stato OFF
   unset %sillaba*
 }
@@ -232,9 +232,9 @@ on 1:notice:stringsoff*:?:{
     if $exists(sillclass.txt) { .remove sillclass.txt }
     if $exists(sillabamanche.txt) { .remove sillabamanche.txt }
     .timer* off
-    msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨¨¨°º© 4,2 StringS Ended 11,2 ©º°¨¨¨°º©9,2 ©º°¨¨°º©'
-    msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 With8,2 %sillaba_1pts 0,2points, the WINNER is8,2 %sillaba_1nick 11,2 ! ¨¨°º©9,2 ©º°¨¨°º©'
-msg %sillaba_canale 9,2 '©º°¨¨°º©11,2 ©º°¨ 0,2 Get the Game! - https://goo.gl/9hKKh111,2  ¨¨°º©9,2 ©º°¨¨°º©'
+    msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 4,2 StringS Ended 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+    msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨ 0,2 With8,2 %sillaba_1pts 0,2points, the WINNER is8,2 %sillaba_1nick 11,2 ! Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
+msg %sillaba_canale 9,2 'Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©11,2 Â©ÂºÂ°Â¨ 0,2 Get the Game! - https://goo.gl/9hKKh111,2  Â¨Â¨Â°ÂºÂ©9,2 Â©ÂºÂ°Â¨Â¨Â°ÂºÂ©'
     set %gamesillaba_stato OFF
     unset %sillaba*
   }
@@ -251,8 +251,8 @@ alias sillaba_pause {
   if (%gamesillaba_stato == ON) || (%gamesillaba_stato == PAUSE) {
     if (%sillaba_manche == ON) { echo -a 8,2 Wait for this round to end } 
     if (%sillaba_manche == OFF) {
-      if (%gamesillaba_stato == PAUSE) { set %gamesillaba_stato ON | msg %sillaba_canale 11,2 ©º°¨¨¨°º© 4,2 Warning: StringS is RESUMING now! 11,2 ©º°¨¨¨°º© | .timernext 1 %sillaba_pausetime sillaba_start_manche | halt } 
-      if (%gamesillaba_stato == ON) { set %gamesillaba_stato PAUSE | msg %sillaba_canale 11,2 ©º°¨¨¨°º© 8,2 StringS is paused. Just a moment... 11,2 ©º°¨¨¨°º© }
+      if (%gamesillaba_stato == PAUSE) { set %gamesillaba_stato ON | msg %sillaba_canale 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 4,2 Warning: StringS is RESUMING now! 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© | .timernext 1 %sillaba_pausetime sillaba_start_manche | halt } 
+      if (%gamesillaba_stato == ON) { set %gamesillaba_stato PAUSE | msg %sillaba_canale 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 8,2 StringS is paused. Just a moment... 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© }
     }
   }
 }
@@ -262,8 +262,8 @@ on 1:notice:stringspause*:?:{
     if (%gamesillaba_stato == ON) || (%gamesillaba_stato == PAUSE) {
       if (%sillaba_manche == ON) { .msg $nick Wait for this round to end } 
       if (%sillaba_manche == OFF) {
-        if (%gamesillaba_stato == PAUSE) { set %gamesillaba_stato ON | msg %sillaba_canale 11,2 ©º°¨¨¨°º© 4,2 Warning: StringS is RESUMING now! 11,2 ©º°¨¨¨°º© | .timernext 1 %sillaba_pausetime sillaba_start_manche | halt } 
-        if (%gamesillaba_stato == ON) { set %gamesillaba_stato PAUSE | msg %sillaba_canale 11,2 ©º°¨¨¨°º© 8,2 StringS is paused. Just a moment... 11,2 ©º°¨¨¨°º© }
+        if (%gamesillaba_stato == PAUSE) { set %gamesillaba_stato ON | msg %sillaba_canale 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 4,2 Warning: StringS is RESUMING now! 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© | .timernext 1 %sillaba_pausetime sillaba_start_manche | halt } 
+        if (%gamesillaba_stato == ON) { set %gamesillaba_stato PAUSE | msg %sillaba_canale 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© 8,2 StringS is paused. Just a moment... 11,2 Â©ÂºÂ°Â¨Â¨Â¨Â°ÂºÂ© }
       }
     }
   }
@@ -272,14 +272,14 @@ on 1:notice:stringspause*:?:{
 alias sillaba_help {
   if ( %gamesillaba_stato != OFF) && (%sillaba_antiflood != ON) {
     set %sillaba_antiflood ON
-    .timer1 1 1 .msg $1  4,2 ©©© StringS ©©© - GAME RULES:
-    .timer2 1 2 .msg $1  8,2 “““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““
+    .timer1 1 1 .msg $1  4,2 Â©Â©Â© StringS Â©Â©Â© - GAME RULES:
+    .timer2 1 2 .msg $1  8,2 Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“
     .timer3 1 3 .msg $1  11,2 Each round a random string gets chosen. Compose a word that contains it without       
     .timer4 1 4 .msg $1  11,2 exceeding the character limit and tell it to $me only, in a private query (this window).
     .timer5 1 5 .msg $1  11,2 0,2!string 11,2to know what's the current string. 0,2!values 11,2to know how many points each letter is worth.
     .timer6 1 6 .msg $1  11,2 0,2!points 11,2to see your score.
     .timer7 1 7 .msg $1  11,2 You can only choose 1 word! To delete your word, type 0,2-delete 11,2(in this window).
-    .timer8 1 8 .msg $1  8,2 ““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““
+    .timer8 1 8 .msg $1  8,2 Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“
     .timer9 1 9 .msg $1  11,2 Have Fun! 
     .timer10 1 10 set %sillaba_antiflood OFF
   }
@@ -288,14 +288,14 @@ alias sillaba_help {
 alias sillaba_instr {
   if ( %gamesillaba_stato != OFF ) && (%sillaba_antiflood != ON) {
     set %sillaba_antiflood ON
-    .timer11 1 1 msg %sillaba_canale 4,2 ©©© StringS ©©© - GAME RULES :
-    .timer12 1 2 msg %sillaba_canale 8,2 “““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““
+    .timer11 1 1 msg %sillaba_canale 4,2 Â©Â©Â© StringS Â©Â©Â© - GAME RULES :
+    .timer12 1 2 msg %sillaba_canale 8,2 Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“
     .timer13 1 3 msg %sillaba_canale 11,2 Each round a random string gets chosen. Compose a word that contains it without        
     .timer14 1 4 msg %sillaba_canale 11,2 exceeding the character limit and reveal it, in a private query, to0,2 $me 11,2.
     .timer15 1 5 msg %sillaba_canale 11,2 0,2!string11,2 to know what's the current string.0,2 !values 11,2to know how many points  
     .timer16 1 6 msg %sillaba_canale 11,2 each letter is worth.0,2 !points11,2 to see your score.
     .timer17 1 7 msg %sillaba_canale 11,2 You can only choose 1 word! To delete your word, type0,2 -delete11,2 (in query to $me ).
-    .timer18 1 8 msg %sillaba_canale 8,2 ““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““
+    .timer18 1 8 msg %sillaba_canale 8,2 Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“Â“
     .timer19 1 9 msg %sillaba_canale 11,2 Have Fun! 
     .timer20 1 10 set %sillaba_antiflood OFF
   }
@@ -416,7 +416,7 @@ alias Sillaba_start_manche { if (%gamesillaba_stato == ON) {
       set %sillaba_blet $rand(a,z)
       set %sillaba_bonusbanner 8,2 + $+ %sillaba_bpoints points 11if the word begins in8,2 $upper(%sillaba_blet)
     }
-    .timer21 1 1 msg %sillaba_canale 9,2 ©º°¨8,2 StringS round # $+ %sillaba_manchenum $+ 9,2 ¨°º©
+    .timer21 1 1 msg %sillaba_canale 9,2 Â©ÂºÂ°Â¨8,2 StringS round # $+ %sillaba_manchenum $+ 9,2 Â¨Â°ÂºÂ©
     .timer22 1 2 msg %sillaba_canale 11,2 The string is:8,2 %sillaba_current 
     .timer23 1 3 msg %sillaba_canale 11,2 Limit set to8,2 %sillaba_lenmax 11,2characters 
     .timer24 1 4 msg %sillaba_canale %Sillaba_bonusbanner 
@@ -473,7 +473,7 @@ alias sillaba_makevalues {
 }
 
 alias sillaba_alert {
-  msg %sillaba_canale 9,2 ©º°¨8,2 10 seconds 'til the round ends. Hurry up!9,2 ¨°º©
+  msg %sillaba_canale 9,2 Â©ÂºÂ°Â¨8,2 10 seconds 'til the round ends. Hurry up!9,2 Â¨Â°ÂºÂ©
   set %sillaba_comline `Computer` 
   set %sillaba_comline $addtok(%sillaba_comline,%sillaba_extr,46)
   if ($len(%sillaba_extr) <= %sillaba_lenmax) write sillabamanche.txt %sillaba_comline
@@ -482,7 +482,7 @@ alias sillaba_alert {
 
 alias sillaba_endofmanche {
   set %sillaba_manche OFF
-  msg %sillaba_canale 9,2 ©º°¨8,2 Time's Over!9,2 ¨°º© The string was8,2 %sillaba_current 
+  msg %sillaba_canale 9,2 Â©ÂºÂ°Â¨8,2 Time's Over!9,2 Â¨Â°ÂºÂ© The string was8,2 %sillaba_current 
   if (%sillaba_bonustype == 1) msg %sillaba_canale 9,2 Bonus letter8,2 x $+ %sillaba_bmult $+ 9,2 in position 8,2# %sillaba_bpos 9,2 was 8,2 $upper(%sillaba_blet) $+ 9,2 . Results for the 8,2# %sillaba_manchenum $+ 9,2 round:
   if (%sillaba_bonustype == 2) msg %sillaba_canale 9,2 Letter8,2 $upper(%sillaba_blet) 9,2bonus8,2 x $+ %sillaba_bmult $+ 9,2 was in position 8,2# %sillaba_bpos $+ 9,2 . Results for the 8,2# %sillaba_manchenum $+ 9,2 round:
   if (%sillaba_bonustype == 3) msg %sillaba_canale 9,2 Each vowel is worth 8,2double 9,2in this round. Results for the 8,2# %sillaba_manchenum $+ 9,2 round:
@@ -746,7 +746,7 @@ alias sillaba_preclass {
 }
 
 alias sillaba_msgclass {
-  if (%timercounter == 1) { msg %sillaba_canale 9,2 ©º°¨8,2 Rankings:9,2 ¨°º© }
+  if (%timercounter == 1) { msg %sillaba_canale 9,2 Â©ÂºÂ°Â¨8,2 Rankings:9,2 Â¨Â°ÂºÂ© }
   if (%timercounter == 2) { 
     set %sillaba_1line $read -l1 sillclass.txt
     set %sillaba_1nick $gettok(%sillaba_1line,1,46)
@@ -788,7 +788,7 @@ alias sillaba_msgclass {
 
 alias sillaba_hub {
   if ( (( %sillaba_1pts > %sillaba_2pts ) && ( %sillaba_1pts >= %sillaba_target )) || (!($exists(sillclass.txt)) && (%sillaba_target == -1)) ) { sillaba_endofgame }
-  else { if (%gamesillaba_stato == ON) { msg %sillaba_canale 9,2 ©º°¨8,2 Be Ready! Next round is about to start!9,2 ¨°º© | .timernew 1 5 sillaba_start_manche | set %sillaba_hub ON } }
+  else { if (%gamesillaba_stato == ON) { msg %sillaba_canale 9,2 Â©ÂºÂ°Â¨8,2 Be Ready! Next round is about to start!9,2 Â¨Â°ÂºÂ© | .timernew 1 5 sillaba_start_manche | set %sillaba_hub ON } }
 }
 
 menu channel {
@@ -914,13 +914,13 @@ on 1:text:!stringshs:%game_channel:{
     set %pts $gettok(%line,2,35)
     if $calc(%i % 2) { set %line 8,2 %Pts $+ 8,2 %nick }  
     else { set %line 11,2 %Pts $+ 11,2 %nick }
-    set %hs %hs $+ 4,2 •·• $+ %line
+    set %hs %hs $+ 4,2 Â•Â·Â• $+ %line
     inc %i
   }
   set %line $read -l 11 stringsrecords.txt
   set %nick $gettok(%line,1,35)
   set %pts $gettok(%line,2,35)
-  msg %game_channel 9,2 ©º°¨8,2 StringS High Scores9,2 ¨°º©
+  msg %game_channel 9,2 Â©ÂºÂ°Â¨8,2 StringS High Scores9,2 Â¨Â°ÂºÂ©
   msg %game_channel 4,2 Record for a single round:8,2 %nick 4,2 $+ (8,2 %pts  4,2)
   msg %game_channel 4,2 Top Ten (average points): %hs
 }
